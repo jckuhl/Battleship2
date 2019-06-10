@@ -14,6 +14,10 @@ public class Ship {
         return this.position;
     }
 
+    public boolean isAtPosition(int x, int y) {
+        return this.position[0] == x && this.position[1] == y;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

@@ -13,7 +13,7 @@ public class ShipSet implements Iterable<Ship>{
 
     public boolean shipIsPresentAt(int x, int y) {
         for(var ship : shipSet) {
-            if(ship.getPosition()[0] == x && ship.getPosition()[1] == y) {
+            if(ship.isAtPosition(x, y)) {
                 return true;
             }
         }
@@ -35,7 +35,7 @@ public class ShipSet implements Iterable<Ship>{
     public boolean remove(int x, int y) {
         Ship removedShip = null;
         for(var ship : this.shipSet) {
-            if(ship.getPosition()[0] == x && ship.getPosition()[1] == y) {
+            if(ship.isAtPosition(x, y)) {
                 removedShip = ship;
             }
         }
