@@ -1,0 +1,29 @@
+package com.company;
+
+import java.util.Arrays;
+
+public class Ship {
+
+    private int[] position;
+
+    public Ship(int x, int y) {
+        this.position = new int[] {x, y};
+    }
+
+    public int[] getPosition() {
+        return this.position;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Ship ship = (Ship) o;
+        return Arrays.equals(position, ship.position);
+    }
+
+    @Override
+    public int hashCode() {
+        return Arrays.hashCode(position);
+    }
+}
